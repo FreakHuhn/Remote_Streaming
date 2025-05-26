@@ -1,0 +1,124 @@
+🖥️ Remote-Streaming vom Gaming-Laptop über Webbrowser (Zero-Install-Lösung)
+🎯 Zielsetzung
+Ziel dieses Projekts ist es, eine leichtgewichtige, browserbasierte Lösung zu entwickeln, um aus einem eingeschränkten System (z. B. Arbeitsplatzrechner ohne Installationsrechte) sicheren, performanten Fernzugriff auf einen privaten Gaming-Laptop zu ermöglichen.
+
+Im Fokus stehen:
+
+Echtzeit-Streaming von Audio und Video
+
+Steuerung per Maus, Tastatur oder Gamepad
+
+Zero-Install am Client (nur Webbrowser nötig)
+
+Kompatibilität mit Firewalls/NAT/WebRTC
+
+Privatsphäre & Sicherheit durch self-hosted Infrastruktur
+
+🔍 Phase 1: Analyse & Architektur
+Anwendungsfall definieren
+Zugriff auf einen privaten Gaming-Laptop zur Nutzung grafik- und rechenintensiver Anwendungen via Browser – etwa für gelegentliche Fernsteuerung, Medienzugriff oder interaktive Anwendungen.
+
+Systemvoraussetzungen evaluieren
+
+Host: Windows-basiert, dedizierte GPU, stabiler Upload (>10 Mbit/s)
+
+Client: Moderner Browser, keine Admin-Rechte
+
+Netzwerk: NAT & Firewall-kompatibel, WebRTC-Unterstützung
+
+Technologiestack festlegen
+
+Backend: Sunshine (self-hosted GameStream-Server)
+
+Frontend: Moonlight Web (WebRTC-Streaming)
+
+Alternativen: WebRTC + WebSocket-basierte Eigenlösung
+
+🧰 Phase 2: Einrichtung des Host-Systems
+Sunshine installieren & konfigurieren
+
+Spiele/Apps als Remote-Anwendungen einbinden
+
+Encoder-Einstellungen anpassen (z. B. NVENC oder Software)
+
+Firewall & Netzwerkeinstellungen prüfen
+
+UDP-Ports: 47984, 47989, 48010
+
+Windows-Firewall-Regeln anpassen
+
+DynDNS einrichten (falls nötig)
+
+z. B. DuckDNS, No-IP, etc.
+
+(Optional) HTTPS-Zugriff via Reverse Proxy
+
+z. B. mit NGINX + Let’s Encrypt oder Cloudflare Tunnel
+
+🌐 Phase 3: Remote-Zugriff vorbereiten
+Router- und Netzwerktests
+
+Portweiterleitung aktivieren
+
+Alternativ: Tunnelzugang mit Cloudflare / Tailscale
+
+Verbindung mit Moonlight Web Client testen
+
+https://moonlight-stream.org/
+
+Überprüfung von: Videoqualität, Audio, Steuerung
+
+Performance optimieren
+
+Auflösung, Bitrate, FPS
+
+Latenz & Stabilität messen
+
+🏢 Phase 4: Nutzung in eingeschränkter Umgebung
+Browser-Kompatibilität testen
+
+WebRTC-Funktion (z. B. via test.webrtc.org)
+
+Zugriff ohne Softwareinstallation sicherstellen
+
+Realbedingungen simulieren (z. B. Arbeitsplatz)
+
+Netzwerkeinschränkungen
+
+Maus- und Tastatureingabe testen
+
+Failsafes & Wiederherstellungsstrategien
+
+Auto-Restart von Sunshine
+
+Remote-Wake oder Smartphone-Backup-Zugriff
+
+📈 Phase 5: Weiterentwicklung
+Custom Web-GUI
+
+Launcher für konfigurierte Apps/Spiele
+
+Nutzerfreundliches UI im Browser
+
+Monitoring & Logging
+
+Verbindungsstabilität überwachen
+
+Alerts bei Ausfall oder hoher Latenz
+
+Security-Hardening
+
+Zugriffsbeschränkung (IP, Token, Login)
+
+TLS, Reverse-Proxy, Authentifizierung
+
+✅ Endergebnis
+Ein vollständig browserbasierter Remote-Desktop-Stream vom privaten Gaming-Laptop – ohne zusätzliche Software auf dem Zielsystem.
+Einsatzfähig für:
+
+eingeschränkte Client-Systeme (z. B. Bürorechner)
+
+Zero-Install-Zugriff auf Hochleistungsanwendungen
+
+Spiel- und Anwendungs-Streaming im privaten Netzwerk oder unterwegs
+
