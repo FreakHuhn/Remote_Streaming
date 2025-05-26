@@ -1,11 +1,11 @@
 Remote_Streaming 
 
 Browser-based remote access to your gaming laptopZero-install. Self-hosted. Firewall-friendly.
-
+__________________________________________________________________________________________________________________________
 Project Goal
 
 Remote_Streaming is intended to become a lightweight, fully browser-based solution for high-performance remote gaming and application streaming. The goal is to support restricted client systems like office PCs without requiring local installations.
-
+__________________________________________________________________________________________________________________________
 Planned core features:
 
 Real-time streaming of audio and video
@@ -17,7 +17,7 @@ Use directly in a web browser
 Firewall and NAT compatibility (WebRTC-based)
 
 Full control via self-hosted infrastructure
-
+__________________________________________________________________________________________________________________________
 Phase 1: Analysis & Architecture
 
 Use Case:
@@ -43,7 +43,7 @@ Backend: Sunshine (GameStream-compatible server)
 Frontend: Moonlight Web (WebRTC client)
 
 Alternative: Custom WebRTC + WebSocket solution possible
-
+__________________________________________________________________________________________________________________________
 Phase 2: Preparing the Host System
 
 Installation & Configuration:
@@ -59,7 +59,7 @@ Open firewall for ports: 47984, 47989, 48010 (UDP)
 Set up DynDNS (e.g., DuckDNS)
 
 Optional: Reverse proxy for HTTPS (NGINX + Let's Encrypt or Cloudflare Tunnel)
-
+__________________________________________________________________________________________________________________________
 Phase 3: Testing Remote Access
 
 Establishing a Connection:
@@ -75,7 +75,7 @@ Test video, audio, and control
 Adjust resolution, bitrate, FPS
 
 Measure latency, optimize stability
-
+__________________________________________________________________________________________________________________________
 Phase 4: Operation in Restricted Environments
 
 Compatibility & Resilience:
@@ -91,7 +91,7 @@ Fail-Safes:
 Configure Sunshine auto-restart
 
 Set up Wake-on-LAN or smartphone fallback access
-
+__________________________________________________________________________________________________________________________
 Phase 5: Further Development
 
 Usability:
@@ -105,7 +105,7 @@ Monitor connections, implement latency alerts
 Secure access: token, IP filtering, authentication
 
 TLS via reverse proxy
-
+__________________________________________________________________________________________________________________________
 Vision
 
 At the end of this learning journey, the result should be a fully browser-based remote desktop stream from your private gaming laptop:
